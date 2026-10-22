@@ -22,7 +22,7 @@ XMLBridge 帮助剪辑师和工作室分析剪辑 XML、迁移格式版本，并
 | 项目 | 当前要求与状态 |
 | --- | --- |
 | 芯片 | Apple Silicon（M 系列）与 Intel（x86_64）分别下载 |
-| 系统 | Apple Silicon 包的依赖要求 macOS 14.4 及以上；Intel 包目标 macOS 13 及以上。当前实机环境 macOS 27.0.1，其他系统尚未实机验收 |
+| 系统 | Apple Silicon 包的依赖要求 macOS 26 及以上；Intel 包目标 macOS 13 及以上。当前实机环境 macOS 27.0.1，其他系统尚未实机验收 |
 | 运行环境 | 无需安装 Python |
 | 签名与公证 | 使用本地临时签名，尚未经过 Developer ID 签名及 Apple 公证 |
 
@@ -53,11 +53,11 @@ XMLBridge 帮助剪辑师和工作室分析剪辑 XML、迁移格式版本，并
 
 ## Intel 版本验证
 
-Intel 包已在 Apple Silicon 的 Rosetta 下完成 409 项回归测试、29 个二进制架构与系统目标检查，以及打包自检和界面转换核对。**Intel 真机、macOS 13 实机与本 Intel 构建的剪辑软件导入尚未验收。** 详情见 Release 的 Intel 使用说明和验证记录。
+Intel 包已在 Apple Silicon 的 Rosetta 下完成 420 项回归测试、29 个二进制架构与系统目标检查，以及打包自检和转换核心核对。**Intel 真机、macOS 13 实机与本 Intel 构建的剪辑软件导入尚未验收。** 详情见 Release 的 Intel 使用说明和验证记录。
 
 ## 验证状态
 
-0.2.0 已完成 409 项 Python 回归测试、打包自检，以及原生界面的文件选择、目录包降级和批量部分失败验证。该版本新增的有损导出结果尚未重新执行剪辑软件导入验收。
+本次隐私重建通过 420 项 Python 回归测试、打包自检和转换核心验证。原生界面的文件选择、目录包降级和批量部分失败为此前版本的验证记录；本次构建未重新执行界面验收和剪辑软件导入。
 
 历史样例测试覆盖 DaVinci Resolve 21.1.1 的部分基础交接，以及 Final Cut Pro 11.2 的指定 FCPXML 1.9 样例。Final Cut Pro 12.4 与 Premiere 尚未完成对应真实导入验证。历史样例通过不代表任意工程通过；详情见 [支持与验证范围](CAPABILITIES.zh-CN.md)。
 

@@ -1,5 +1,17 @@
 # XMLBridge 第三方来源与声明
 
+## 按安装包区分运行组件
+
+两种架构使用不同的 Qt 版本。它们分别记录在各自安装包附带的声明中，不能把 Apple Silicon 的清单当作 Intel 清单。
+
+| 安装包 | CPython | PySide6 / Shiboken / Qt | 系统要求 |
+| --- | --- | --- | --- |
+| Apple Silicon（arm64） | 3.12.13 | 6.12.0 | macOS 26 及以上 |
+| Intel（x86_64） | 3.12.13 | 6.8.3 | macOS 13 及以上 |
+
+Intel 的完整声明与许可见 Release 中的 `XMLBridge-Intel-ThirdParty-Notices-0.2.0.zip`，对应验证记录为 `XMLBridge-Intel-Validation-0.2.0.json`。以下详细组件清单适用于 Apple Silicon 构建。
+
+
 本文记录 XMLBridge 0.2.0 构建环境中相关组件的来源、版本和原始声明位置。它不授予额外权利，也不替代各组件的完整许可文本。发布附件 `XMLBridge-ThirdParty-Notices-0.2.0.zip` 中的 `licenses/installed` 保存实际环境中收集的原始许可，`sources.json` 记录来源和未找到本地文本的组件；`licenses/upstream-sources.json` 记录官方上游补充文本的下载地址、版本引用和 SHA-256。本公开仓库不包含项目源码归档。仅安装在开发环境中的组件不一定全部进入 `.app`；以最终包内容为准。
 
 ## Apple XML 格式定义
