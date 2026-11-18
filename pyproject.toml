@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xmlbridge-studio"
+version = "0.3.0"
+description = "Local editorial XML inspection, migration and interchange"
+license = {file = "LICENSE"}
+authors = [{name = "迪儿 Dear"}]
+requires-python = ">=3.12"
+dependencies = ["lxml>=5.3", "PySide6>=6.8"]
+
+[project.urls]
+Author = "https://github.com/sht2574898282-afk"
+
+[project.scripts]
+xmlbridge = "xmlbridge.__main__:main"
+
+[tool.setuptools.package-data]
+xmlbridge = ["schemas/*.dtd", "assets/*", "host_validation.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

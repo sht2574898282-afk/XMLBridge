@@ -1,0 +1,4 @@
+ziglang==0.15.2
+Pillow==13.0.0
+lief==0.17.6
+pefile==2024.8.26
