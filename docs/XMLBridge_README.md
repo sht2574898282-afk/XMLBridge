@@ -3,7 +3,7 @@
 <h1 align="center">XMLBridge · 剪接</h1>
 <p align="center">影视 XML 版本转换与代理回套工具</p>
 <p align="center">由 <a href="https://github.com/sht2574898282-afk">迪儿 Dear</a> 创作</p>
-<p align="center"><a href="https://github.com/sht2574898282-afk/XMLBridge/releases/tag/v0.3.2">下载 0.3.2</a> · <a href="docs/XMLBridge-Manual-0.3.2-zh-CN.pdf">图解使用手册</a> · <a href="LICENSE">许可与署名</a> · <a href="https://github.com/sht2574898282-afk/XMLBridge/issues">反馈问题</a></p>
+<p align="center"><a href="https://github.com/sht2574898282-afk/XMLBridge/releases/tag/v0.3.3">下载 0.3.3</a> · <a href="docs/XMLBridge-Manual-0.3.3-zh-CN.pdf">图解使用手册</a> · <a href="LICENSE">许可与署名</a> · <a href="https://github.com/sht2574898282-afk/XMLBridge/issues">反馈问题</a></p>
 
 用于剪辑交接与调色回套。本机处理 XML，生成新的交接文件，保留原始工程与素材。
 现在可以在同一个窗口切换**版本转换**和**代理回套**，并在多个原片候选中人工确认对应文件。
@@ -12,21 +12,21 @@
 
 ## 当前版本与下载
 
-**0.3.2 预览版**：加入代理回套、放大的功能切换入口、八页图解手册、源码和许可；清理了构建环境路径残留。
+**0.3.3 预览版**：切换为标准 AGPL-3.0-only，同步更新作者声明、软件许可入口、源码获取入口与八页图解手册。版本转换和代理回套功能保持原有行为。
 
 | 下载内容 | 说明 |
 | --- | --- |
-| [Apple 芯片 Mac 完整包](https://github.com/sht2574898282-afk/XMLBridge/releases/download/v0.3.2/XMLBridge-0.3.2-complete-macOS-arm64.zip) | 包含软件、完整对应源码包、手册、README 与许可 |
-| [Apple 芯片 Mac 软件包](https://github.com/sht2574898282-afk/XMLBridge/releases/download/v0.3.2/XMLBridge-0.3.2-macOS-arm64.zip) | 仅需安装软件时使用；源码可从同一发布页免费取得 |
-| [源码包](https://github.com/sht2574898282-afk/XMLBridge/releases/download/v0.3.2/XMLBridge-0.3.2-source.zip) | 可阅读、可修改的源码，包含构建脚本、测试和第三方声明 |
-| [八页 PDF 手册](https://github.com/sht2574898282-afk/XMLBridge/releases/download/v0.3.2/XMLBridge-Manual-0.3.2-zh-CN.pdf) | 版本转换、代理回套、候选选择、状态解释与许可 |
-| [校验清单](https://github.com/sht2574898282-afk/XMLBridge/releases/download/v0.3.2/SHA256SUMS.txt) | 本次发布附件的 SHA-256 |
+| [Apple 芯片 Mac 完整包](https://github.com/sht2574898282-afk/XMLBridge/releases/download/v0.3.3/XMLBridge-0.3.3-complete-macOS-arm64.zip) | 包含软件、完整对应源码包、手册、README 与许可 |
+| [Apple 芯片 Mac 软件包](https://github.com/sht2574898282-afk/XMLBridge/releases/download/v0.3.3/XMLBridge-0.3.3-macOS-arm64.zip) | 仅需安装软件时使用；源码可从同一发布页免费取得 |
+| [源码包](https://github.com/sht2574898282-afk/XMLBridge/releases/download/v0.3.3/XMLBridge-0.3.3-source.zip) | 可阅读、可修改的源码，包含构建脚本、测试和第三方声明 |
+| [八页 PDF 手册](https://github.com/sht2574898282-afk/XMLBridge/releases/download/v0.3.3/XMLBridge-Manual-0.3.3-zh-CN.pdf) | 版本转换、代理回套、候选选择、状态解释与许可 |
+| [校验清单](https://github.com/sht2574898282-afk/XMLBridge/releases/download/v0.3.3/SHA256SUMS.txt) | 本次发布附件的 SHA-256 |
 
-0.3.2 提供 macOS Apple 芯片安装包，构建最低目标为 macOS 13，实际验证环境为当前 Apple 芯片 Mac；没有在 macOS 13 实机上验证。
+0.3.3 提供 macOS Apple 芯片安装包，构建最低目标为 macOS 13，实际验证环境为当前 Apple 芯片 Mac；没有在 macOS 13 实机上验证。
 安装包使用本地临时签名，未经 Developer ID 签名或 Apple 公证；首次打开提示可参阅 [Apple 官方帮助](https://support.apple.com/zh-cn/102445)。
 运行安装包无需另装 Python。
 
-Intel Mac 和 Windows x64 的 **0.2.0 历史测试版**继续保留在[旧版下载页](https://github.com/sht2574898282-afk/XMLBridge/releases/tag/v0.2.0)，不代表已更新到 0.3.2，也不包含本次新增整合功能。
+Intel Mac 和 Windows x64 的 **0.2.0 历史测试版**继续保留在[旧版下载页](https://github.com/sht2574898282-afk/XMLBridge/releases/tag/v0.2.0)，不代表已更新到 0.3.3，也不包含本次新增整合功能。
 
 ## 两项功能
 
@@ -72,25 +72,21 @@ Intel Mac 和 Windows x64 的 **0.2.0 历史测试版**继续保留在[旧版下
 
 Copyright © 2026 **迪儿 Dear**。作者主页：<https://github.com/sht2574898282-afk>
 
-采用 [XMLBridge 署名 同许可源码公开 免费分发许可 1.0](LICENSE)：
+本项目原创部分采用标准 **[GNU Affero General Public License v3.0 only](LICENSE)**，标识为 `AGPL-3.0-only`。
 
-- 可以免费取得、使用、学习、修改和分享本项目。
-- 复制、修改或整合受保护的代码或设计，必须保留“迪儿 Dear”及作者主页，并标明修改。
-- 对外分发或提供网络功能的衍生版本，必须免费公开完整对应源码，衍生部分继续适用同一许可。
-- 软件及衍生版本不得销售、收费授权、收费订阅或通过强制付费门槛变相出售。
-- **允许使用软件完成收费的剪辑、调色工作。** 客户素材、工程、输出 XML、视频等工作成果无需公开。
+- 允许使用、研究、修改、商用和收费；收费不免除许可义务。
+- 按协议保留适用的原始版权、许可、作者署名与无担保声明，修改后注明修改情况。
+- 对外分发受协议覆盖的修改版或组合程序时，应按 AGPL 提供完整对应源码。
+- 修改版通过网络提供交互时，也需按第 13 条向远程用户提供对应源码获取方式。
+- 独立程序仅仅并列存放或分发，不会因此自动适用 AGPL；单纯借鉴思路的独立实现以法律规定为准。
+- 客户素材、工程与视频等成果不会仅因使用本工具而自动适用 AGPL。
 
-该许可带有收费限制，属于自定义**源码可用许可**，不属于 OSI 定义的开源许可，也不是 GPL / AGPL 的修改版。
-单纯借鉴思想或功能而独立实现的情形，以法律规定为准。本说明是摘要，完整条款以 LICENSE 为准。
+作者及来源声明见 [NOTICE](NOTICE)。署名信息为 **迪儿 Dear** 与作者主页 <https://github.com/sht2574898282-afk>。
+软件“帮助”菜单可查看作者与许可声明、完整许可原文及本版本源码入口。
+本说明为摘要，以未经改写的英文 LICENSE 全文为准。
 
-衍生项目的署名示例：
-
-> 基于 XMLBridge，由迪儿 Dear 创作。  
-> 作者主页：https://github.com/sht2574898282-afk  
-> 本版本由〔修改者〕修改，完整对应源码见〔本版本源码地址〕。
-
-第三方组件仍遵循各自原许可；详见 [第三方声明](docs/THIRD_PARTY_NOTICES.md) 和 `docs/licenses`。
-本项目自定义许可不改变第三方权利，也不限制按其原许可修改、替换或重新链接相关独立组件。
+0.3.3 起改用 AGPL-3.0-only。0.3.2 等历史版本以其随附许可为准；本次更新不追溯撤销已经授予的旧版本权利。
+第三方组件、Apple 格式定义等仍按各自原许可提供，详见 [第三方声明](docs/THIRD_PARTY_NOTICES.md) 与 `docs/licenses`。
 
 ## 源码与构建
 
@@ -104,11 +100,11 @@ Copyright © 2026 **迪儿 Dear**。作者主页：<https://github.com/sht257489
 需要 Python 3.12 或更新版本。开发入口为 `python -m xmlbridge`；运行源码需安装 `pyproject.toml` 声明的依赖。
 原生界面需要 Xcode Command Line Tools。手册字体不随源码分发，用 `XMLBRIDGE_MANUAL_FONT_DIR` 指定含 HeitiSC-Light.ttf 和 HeitiSC-Medium.ttf 的字体目录。
 
-0.3.2 更新原生界面、手册、许可及构建脱敏，转换引擎逻辑沿用 0.3.0；当前 Python 包版本保留引擎版本，软件发行版本由 RELEASE_VERSION 记录为 0.3.2。
+0.3.3 更新许可、作者及源码入口与手册，转换引擎逻辑沿用 0.3.0；当前 Python 包版本保留引擎版本，软件发行版本由 RELEASE_VERSION 记录为 0.3.3。
 
 ## 验证与隐私
 
-0.3.2 已完成：原生界面编译及帮助菜单检查、14 项本次相关回归测试、打包自检、实际版本转换、代理扫描与选择后生成 XML、非索尼 S03 素材保持原引用、30 个二进制架构与系统目标检查，以及解压后的签名检查。
+0.3.3 已完成：原生界面编译及帮助菜单检查、相关回归测试、打包自检、实际版本转换、代理扫描与选择后生成 XML、非索尼 S03 素材保持原引用、30 个二进制架构与系统目标检查，以及解压后的签名检查。
 这些检查不等于任意客户工程或目标软件都能无损交接。
 
 软件与发布附件经过递归隐私扫描，包括内置压缩模块、PDF 文本和属性；已清理本机构建目录标识。

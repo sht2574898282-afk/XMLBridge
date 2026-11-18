@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 迪儿 Dear
+# Author: https://github.com/sht2574898282-afk
 from pathlib import Path
 import json, math, re, os
 from reportlab.pdfgen import canvas
@@ -14,7 +17,7 @@ for n,f in [('CN','HeitiSC-Light.ttf'),('CNB','HeitiSC-Medium.ttf')]:
 W,H=595.2756,841.8898
 INK='#181C24';MUTED='#626772';PAPER='#F8F7F3';LINE='#DCDDD8';ACC='#DE5B34';TINT='#F4E6DC';PURPLE='#5751AD';WHITE='#FFFFFF';COOL='#ECECF6';GREEN='#2D7660'
 AUTHOR='迪儿 Dear';URL='https://github.com/sht2574898282-afk'
-PATH=OUT/'XMLBridge_使用手册_0.3.2.pdf'
+PATH=OUT/'XMLBridge_使用手册_0.3.3.pdf'
 c=canvas.Canvas(str(PATH),pagesize=(W,H),pageCompression=1,invariant=1)
 c.setTitle('XMLBridge 使用手册');c.setAuthor(AUTHOR);c.setSubject('版本转换 代理回套 许可与署名');c.setCreator('XMLBridge')
 page_n=0;TEXT=[]
@@ -59,7 +62,7 @@ def note(title,body,y,kind='warm'):
 def page(kicker,title,sub):
  global page_n
  page_n+=1;box(0,0,W,H,PAPER)
- text('XMLBridge',44,28,13,'Helvetica-Bold');right('USER GUIDE  /  0.3.2',W-44,32,8,'Helvetica')
+ text('XMLBridge',44,28,13,'Helvetica-Bold');right('USER GUIDE  /  0.3.3',W-44,32,8,'Helvetica')
  rule(44,57,W-88)
  text(kicker,44,82,9,'Helvetica-Bold',ACC)
  text(title,44,106,27,'CNB')
@@ -199,16 +202,16 @@ text('按钮不可用：先采用一个可回套条目。仍有离线：检查�
 finish()
 
 #08 license summary
-page('07 / LICENSE AND CREDIT','源码可用与作者署名','软件及衍生版本免费分享；允许用于收费的剪辑、调色和其他专业制作工作。')
+page('07 / LICENSE AND CREDIT','AGPL 许可与作者署名','采用 AGPL-3.0-only。允许商用和收费，同时履行版权声明与对应源码提供义务。')
 text(AUTHOR,44,211,27,'CNB')
 text(URL,44,253,10,'Helvetica',PURPLE)
 c.linkURL(URL,(44,H-269,420,H-250),relative=0)
 rule(44,290,W-88)
 y=316
-for n,title,body in [('01','保留作者署名','复制、修改或整合受保护的代码与设计时，在 README 以及软件“关于”或“帮助”中保留迪儿 Dear 和作者主页。'),('02','衍生版本同许可公开源码','对外分发或提供网络功能时，同时免费公开完整对应源码、修改与构建说明；衍生部分继续适用同一许可。'),('03','软件及衍生版本不得收费','不得销售、收激活费或订阅费，不得用付费门槛变相出售。客户的素材、工程和视频成果无需公开。')]:
+for n,title,body in [('01','保留版权与作者声明','按协议保留适用的迪儿 Dear 版权、作者来源、许可与无担保声明。修改后注明修改情况，作者主页作为来源信息保留。'),('02','分发衍生版本时提供源码','对外分发受 AGPL 覆盖的修改版或组合程序时，应按同一许可提供完整对应源码。独立程序仅并列存放不自动受影响。'),('03','网络交互同样提供源码','修改版通过网络提供交互时，也应向这些用户提供对应源码获取方式。AGPL 允许商用与收费；用户素材及制作成果不因此自动适用 AGPL。')]:
  text(n,44,y,17,'Helvetica-Bold',ACC);text(title,86,y,14,'CNB');y=para(body,86,y+28,W-130,10.5,18,fill=MUTED)+24
 box(44,668,W-88,80,WHITE,LINE,8)
-para('本页为许可摘要，完整条款见随附 LICENSE。采用自定义源码可用许可，含收费限制，不属于 OSI 定义的开源许可。第三方组件保留原许可；仅借鉴思想而独立实现的情形以法律规定为准。',59,684,W-118,9.5,16,fill=MUTED)
+para('本页是许可摘要，完整条款见 LICENSE，作者与源码入口见 NOTICE。软件“帮助”菜单可直接查看。第三方组件按原许可提供；单纯借鉴思路的独立实现以法律规定为准。',59,684,W-118,9.5,16,fill=MUTED)
 finish();c.save()
 (OUT/'manual-text.json').write_text(json.dumps(TEXT,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({'file':PATH.name,'pages':page_n,'design':'warm_editorial_vector_diagrams','author':AUTHOR},ensure_ascii=False))

@@ -1,6 +1,6 @@
 # XMLBridge 第三方来源与声明
 
-本文记录 XMLBridge 0.3.2 中相关组件的来源、版本和原始声明位置。当前 macOS Apple 芯片版运行时为 CPython 3.12.13、PySide6 / Qt 6.8.3，具体锁定依赖见 requirements-build.lock。XMLBridge 原创部分另按根目录 LICENSE 提供；该自定义许可不改变以下第三方许可。它不授予额外权利，也不替代各组件的完整许可文本。随文 `licenses/installed` 保存实际环境中收集的原始许可，`sources.json` 记录来源和未找到本地文本的组件；`licenses/upstream-sources.json` 记录官方上游补充文本的下载地址、版本引用和 SHA-256。源码归档另有 `third-party-licenses`，由交付脚本重新从构建环境收集。仅安装在开发环境中的组件不一定全部进入 `.app`；以最终包内容为准。
+本文记录 XMLBridge 0.3.3 中相关组件的来源、版本和原始声明位置。当前 macOS Apple 芯片版运行时为 CPython 3.12.13、PySide6 / Qt 6.8.3，具体锁定依赖见 requirements-build.lock。XMLBridge 原创部分另按根目录 LICENSE 提供；AGPL 许可不改变以下第三方许可。它不授予额外权利，也不替代各组件的完整许可文本。随文 `licenses/installed` 保存实际环境中收集的原始许可，`sources.json` 记录来源和未找到本地文本的组件；`licenses/upstream-sources.json` 记录官方上游补充文本的下载地址、版本引用和 SHA-256。源码归档另有 `third-party-licenses`，由交付脚本重新从构建环境收集。仅安装在开发环境中的组件不一定全部进入 `.app`；以最终包内容为准。
 
 ## Apple XML 格式定义
 

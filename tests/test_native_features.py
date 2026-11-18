@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 迪儿 Dear
+# Author: https://github.com/sht2574898282-afk
 """Independent, official-DTD-valid regression coverage for complex editorial XML.
 
 These tests prove native XML preservation and conservative interchange decisions.

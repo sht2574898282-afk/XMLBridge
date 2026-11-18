@@ -6,13 +6,15 @@ build-backend = "setuptools.build_meta"
 name = "xmlbridge-studio"
 version = "0.3.0"
 description = "Local editorial XML inspection, migration and interchange"
-license = {file = "LICENSE"}
+license = "AGPL-3.0-only"
+license-files = ["LICENSE", "NOTICE"]
 authors = [{name = "迪儿 Dear"}]
 requires-python = ">=3.12"
 dependencies = ["lxml>=5.3", "PySide6>=6.8"]
 
 [project.urls]
 Author = "https://github.com/sht2574898282-afk"
+Source = "https://github.com/sht2574898282-afk/XMLBridge"
 
 [project.scripts]
 xmlbridge = "xmlbridge.__main__:main"

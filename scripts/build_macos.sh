@@ -1,4 +1,7 @@
 #!/bin/zsh
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 迪儿 Dear
+# Author: https://github.com/sht2574898282-afk
 set -euo pipefail
 task_root="${0:A:h:h}"
 cd "$task_root"
@@ -20,6 +23,7 @@ lipo -verify_arch "$task_arch" "$task_ffprobe"
 task_docs="${XMLBRIDGE_BUILD_DOCS:-$task_root/$task_docs_default}"
 # Bundle the project's own license as well as the independent upstream notices.
 cp "$task_root/LICENSE" "$task_docs/XMLBridge_LICENSE.txt"
+cp "$task_root/NOTICE" "$task_docs/XMLBridge_NOTICE.txt"
 cp "$task_root/README.md" "$task_docs/XMLBridge_README.md"
 if [[ -f "$task_docs/XMLBridge-Manual-$task_release_version-zh-CN.pdf" ]]; then
   cp "$task_docs/XMLBridge-Manual-$task_release_version-zh-CN.pdf" "$task_docs/XMLBridge_使用说明书.pdf"

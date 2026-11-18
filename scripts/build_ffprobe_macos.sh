@@ -1,4 +1,7 @@
 #!/bin/zsh
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 迪儿 Dear
+# Author: https://github.com/sht2574898282-afk
 set -euo pipefail
 task_root="${0:A:h:h}"
 task_source="${1:?Provide an unpacked FFmpeg source directory}"

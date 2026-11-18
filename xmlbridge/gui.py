@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 迪儿 Dear
+# Author: https://github.com/sht2574898282-afk
 """Chinese desktop workbench for inspecting and converting editorial XML."""
 from __future__ import annotations
 

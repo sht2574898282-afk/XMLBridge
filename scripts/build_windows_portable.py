@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 迪儿 Dear
+# Author: https://github.com/sht2574898282-afk
 """Assemble a relocatable x64 Windows test build without shipping project sources.
 
 Build tools: CPython 3.12, ziglang 0.15.2, Pillow, LIEF 0.17.6, pefile.
@@ -111,6 +114,8 @@ def build(runtime: Path,wheels: Path,destination: Path):
     destination.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="xmlbridge-windows-",dir=ROOT/"build")as temp:
         temp=Path(temp);app=temp/"XMLBridge";app.mkdir()
+        shutil.copy2(ROOT/"LICENSE", app/"LICENSE")
+        shutil.copy2(ROOT/"NOTICE", app/"NOTICE")
         target=app/"runtime";target.mkdir()
         for name in ["python.exe","pythonw.exe","python3.dll","python312.dll","vcruntime140.dll","vcruntime140_1.dll","LICENSE.txt"]:
             shutil.copy2(runtime/name,target/name)
@@ -162,7 +167,7 @@ Windows 盘符与 UNC 素材引用已适配。Mac 的 /Volumes 等素材路径�
 验证状态：Mac 上的 Qt 界面/核心回归与 Windows 二进制/包结构静态检查已执行；尚未做 Windows 真机运行、Windows 剪辑软件导入或本包 Windows 实际启动验收，请在你的机器上测试。
 本包未进行 Windows 代码签名。若系统或安全软件拦截，请保留提示截图并反馈，不需要关闭安全软件。
 启动错误记录：%LOCALAPPDATA%\\XMLBridge\\Logs\\startup-error.log（仅在本机生成，不会自动上传）。反馈前请去掉路径、项目名等私人内容。
-本次为私下试用包，未发布到 GitHub。应用源代码未随包提供；Python 字节码不构成防反编译保护。
+本工具按 AGPL-3.0-only 提供，允许商用与收费，并应履行对应源码与法律声明等义务。许可全文见根目录 LICENSE，作者及源码取得方式见根目录 NOTICE。Python 字节码不替代对应源码。
 
 第三方声明：runtime/LICENSE.txt、runtime/Lib/site-packages 中各组件的 dist-info/licenses，以及 ThirdParty 中的格式定义声明。Qt/PySide/Shiboken 为 6.8.3，lxml 为 6.1.3，CPython 为 3.12.13。
 ''',encoding="utf-8-sig")

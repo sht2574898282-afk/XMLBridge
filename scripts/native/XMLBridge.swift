@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// Copyright (c) 2026 迪儿 Dear
+// Author: https://github.com/sht2574898282-afk
 import SwiftUI
 import AppKit
 import Combine
@@ -346,8 +349,17 @@ struct XMLBridgeApp: App {
                         NSWorkspace.shared.open(manual)
                     }
                     Button("许可与作者署名") {
+                        let license = Bundle.main.bundleURL.appendingPathComponent("Contents/Resources/docs/XMLBridge_NOTICE.txt")
+                        NSWorkspace.shared.open(license)
+                    }
+                    Button("AGPL-3.0 许可全文") {
                         let license = Bundle.main.bundleURL.appendingPathComponent("Contents/Resources/docs/XMLBridge_LICENSE.txt")
                         NSWorkspace.shared.open(license)
+                    }
+                    Button("本版本完整源代码") {
+                        if let url = URL(string: "https://github.com/sht2574898282-afk/XMLBridge/tree/v0.3.3") {
+                            NSWorkspace.shared.open(url)
+                        }
                     }
                     Button("迪儿 Dear 的 GitHub") {
                         if let url = URL(string: "https://github.com/sht2574898282-afk") {

@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 迪儿 Dear
+# Author: https://github.com/sht2574898282-afk
 """Proxy reconform actions shared by the native window and the Qt workbench."""
 from __future__ import annotations
 

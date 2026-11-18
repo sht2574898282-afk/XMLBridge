@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 迪儿 Dear
+# Author: https://github.com/sht2574898282-afk
 """Package only reviewable XMLBridge source and exact local dependency metadata."""
 from __future__ import annotations
 
@@ -26,7 +29,7 @@ EXCLUDED_PARTS = {"__pycache__", ".pytest_cache", ".venv", "build", "dist"}
 def source_files() -> dict[str, bytes]:
     files = {"pyproject.toml": (ROOT / "pyproject.toml").read_bytes(),
              "launcher.py": (ROOT / "launcher.py").read_bytes()}
-    for name in ("LICENSE", "README.md", "RELEASE_VERSION", "logo.png"):
+    for name in ("LICENSE", "NOTICE", "README.md", "RELEASE_VERSION", "logo.png"):
         if (ROOT / name).is_file():
             files[name] = (ROOT / name).read_bytes()
     for lock in ("requirements-build.lock", "requirements-arm64.lock", "requirements-intel.lock", "requirements-windows.lock", "requirements-windows-build.lock"):

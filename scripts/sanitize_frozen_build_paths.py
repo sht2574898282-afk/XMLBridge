@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 迪儿 Dear
+# Author: https://github.com/sht2574898282-afk
 """Remove macOS temporary build identifiers from frozen sysconfig metadata.
 
 Only the compressed sysconfig module is replaced, without moving any archive
